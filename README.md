@@ -37,6 +37,13 @@ required. For example, I don't use the AWS ToolKit when I'm not working with AWS
 
 Once you've set up the plugins and configured them to your liking, you're ready to go!
 
+### Create a New Project in PyCharm
+Before you start to use Python, you need to setup a new Project in PyCharm. You can do this by opening PyCharm and clicking 
+Create New Project. From this you can easily setup a new Python project or just follow the instructions 
+here -> https://www.jetbrains.com/help/pycharm/creating-and-running-your-first-python-project.html
+
+Once you've done that you'll see a new Project window pop-up with all the default files.
+
 ## Setting up Python & Your Virtual Environment
 Now that you've got PyCharm setup, you can now start playing around with Python. First, double check which Python 
 version your running by either looking down the bottom right of the PyCharm window or in PyCharm, 
@@ -44,6 +51,33 @@ go to -> Settings -> Project (Your Project Name) -> Python Interpreter, and it s
 running. If you didn't manually install it, the Python version will be the most up-to-date version packaged with the 
 PyCharm installer. Currently, I'm running version 3.9 for which feature updates can be found 
 here - https://www.python.org/downloads/release/python-390/
+
+### Set up your virtual environment
+If you've created a new project in PyCharm, it's possible that you've already got a virtual environment setup. If you 
+imported a project or didn't create a new one with a virtual environment, we'll go through how to set one up.
+
+Let's first go through what a virtual environment is. A Python Virtual environment is a local folder structure of Python
+packages that are related only to the project the virtual environment is linked to. It allows you to create separate
+virtual environments for each project to reduce un-wanted packages for different projects, reduce dependency package
+issues and reduce the amount of packages installed in your global System environment. For example, some projects may use
+different versions of packages, and you can't install both of these at the same time globally, so you need two locations 
+for them. Then you have to point your project to tell it where the correct version of the package is etc. and this
+becomes tedious over time. Creating a virtual environment means that you know exactly what packages a project is using,
+and you can manage it better over time. 
+
+You can create a virtual environment in two ways. The first is using PyCharm. In Pycharm, go to -> Settings ->
+Project (project name) -> Python Interpreter -> Add Interpreter (Add Local Interpreter) -> Virtualenv Environment ->
+New -> Choose the location to save the virtual environment and the base python interpreter and click OK.
+
+In case the above instructions don't work, check the PyCharm 
+Documentation - https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html#python_create_virtual_env
+
+The second way to create a virtual environment is using the Terminal and this guide from Real Python covers all the 
+steps required - https://realpython.com/python-virtual-environments-a-primer/#how-can-you-work-with-a-python-virtual-environment
+
+Once you've done that, you're ready to go and get hands on into code! 
+
+## Playing around with Python, the simple steps!
 
 
 
