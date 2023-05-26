@@ -34,4 +34,3 @@ print(type(float_e))
 # https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
 print(dir(int_a))
 print(dir(float_a))
-
