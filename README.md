@@ -37,6 +37,12 @@ required. For example, I don't use the AWS ToolKit when I'm not working with AWS
 
 Once you've set up the plugins and configured them to your liking, you're ready to go!
 
+### Fonts
+This is a more pedantic section that I wanted to add which was fonts. Everyone has their favourite fonts and some more
+than others. I preferred the default 'JetBrains Monospaced' font or the 'Fira Code' monospaced font because you can use 
+font ligatures. I found this from a friend and since I've started using it, I've liked it because it's just that little
+bit fancy when using arrows for example ->. You can find out more about font ligatures here -> https://en.wikipedia.org/wiki/Ligature_(writing)
+
 ### Create a New Project in PyCharm
 Before you start to use Python, you need to setup a new Project in PyCharm. You can do this by opening PyCharm and clicking 
 Create New Project. From this you can easily setup a new Python project or just follow the instructions 
