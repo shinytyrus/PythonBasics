@@ -10,7 +10,7 @@ print(type(dict_a))
 print(type(dict_b))
 print(type(dict_c))
 
-# common list functionalities
+# common dictionary functionalities
 length_dict = len(dict_b)
 get_key_dict = dict_b.get("test")
 keys_dict = dict_b.keys()
@@ -26,7 +26,7 @@ print(values_dict)
 print(list_dict)
 print(key_value_1_dict)
 
-# List Manipulation - List objects are mutable
+# List Manipulation - Dictionary objects are mutable
 dict_b["test"] = "helloWorld!"
 print(dict_b)
 del dict_b["test"]
