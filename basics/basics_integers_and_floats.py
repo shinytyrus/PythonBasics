@@ -34,3 +34,11 @@ print(type(float_e))
 # https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
 print(dir(int_a))
 print(dir(float_a))
+
+
+def add_to(x):
+    return x + 1
+
+
+def double_it(x):
+    return x * 2
