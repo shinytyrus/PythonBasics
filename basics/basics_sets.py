@@ -15,10 +15,12 @@ max_set = max(set_a)
 min_set = min(set_a)
 length_set = len(set_a)
 difference_set = set_a.difference(set_b)
+intersection_set = set_b.intersection(set_a)
 print(max_set)
 print(min_set)
 print(length_set)
 print(difference_set)
+print(intersection_set)
 
 # Set Manipulation - Sets are mutable
 set_a.add(5)
