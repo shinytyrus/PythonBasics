@@ -116,9 +116,10 @@ Python, but the one I prefer is 'pytest' because of how easy it is to use and ad
 -> https://docs.pytest.org/en/7.1.x/index.html
 
 ## PyTest -> Installation and Set Up
-Setting up Pytest is quite straight forward. First, make sure that your in your Python Virtual Environment. You could
-install this globally but if you decide to test out other testing frameworks it may cause issues. Once you've activated
-your Virtual Environment, use pip to install the framework -> 'pip install pytest'.
+Setting up Pytest is quite straight forward. First, open up a terminal and change directory to your project. Then make 
+sure that your in your Python Virtual Environment. You could install this globally but if you decide to test out other 
+testing frameworks it may cause issues. Once you've activated your Virtual Environment, use pip to install the framework
+-> 'pip install pytest'.
 
 ### Using PyTest in PyCharm
 Using PyTest within PyCharm has its benefits as it can make the testing process a bit easier and more fluid to run.
@@ -129,7 +130,7 @@ case, we can set up one test configuration or multiple. To start of we'll create
 In here, you'll need to set the following:
 
 * Target -> Script Path
-* Target Location <The PATH to your project directory>
+* Target Location -> <The PATH to your project directory>
 * Environment -> Working Directory -> <The PATH to your project directory>
 
 Once you've done that save it.
@@ -156,12 +157,48 @@ using pytest: `python3 -m pytest`
 This will output the same information as if you'd run it using the sample PyCharm test configuration as the section
 above. 
 
-## Coverage Testing
+## Code Coverage
+Code coverage is additional step you can add into your testing as it checks how much of your code you've actually
+tested. You can write as many tests as you want but if you don't test all of your code, then it's possible that you may
+run into edge cases where your code will break. Code Coverage helps to verify that you've tested all your code and not
+missed any parts. For example, it helps to check if you've tested all the functions or if you've tested all the branches
+in your code as well (known as branch coverage).
 
+Setting up code coverage is quite simple and since we're already using pytest as our testing framework, we can use 
+'pytest-cov' as our code coverage tool. To do this, similar to installing 'pytest', first open up a terminal and change
+directory to your projects folder. Then, make sure that your in your Python Virtual Environment and it's activated. Then
+use pip to install the framework -> 'pip install pytest-cov'.
 
+Once that successfully installs, you should be able to run it.
 
+### Code Coverage using PyCharm
+To enable code coverage in PyCharm can be done through the Run Configuration setup earlier. Edit the pytest run
+configuration and in the 'Additional Arguments' section add the following parameters 
+`--cov-branch --cov=Module_A --cov-report=html`. 
 
+`--cov-branch` enables branch coverage and lets you know if you've covered all possible branches within the code. An
+example of a branch is an if-statement, where there could be multiple possibilities. 
 
+`--cov=Module_A` enables coverage on all files within that source or module. In this case we've enabled coverage for the
+'Module_A' module and all it's files underneath. If your module is named differently, you can just change the name or if
+you have multiple modules that you want to run coverage over, just add more values for that parameter. 
+
+`--cov-report=html` this stores the results of the coverage into a report and in this case saves it out as a HTML file.
+This comes in useful as you can open up the HTML file within a browser of your choice and see which lines have been
+covered and which haven't across all the files that were tested. 
+
+Run the configuration and you should see a new folder stored within the project called 'htmlcov'. Within this folder
+will be a file called 'index.html', open that in a browser and you'll see the total coverage for all your files. Remember
+coverage doesn't show you what tests fail and pass, it only shows you what part of your code that you've tested and 
+haven't tested. 
+
+### Code Coverage using Terminal
+To enable code coverage using the Terminal, simply open up a terminal/console and change directory to the root folder of
+the project. Once in there, you can run the following command to run the test and code coverage using pytest:
+`python3 -m pytest --cov-branch --cov=Module_A --cov-report=html`.
+
+This will output the same information as if you'd run it using the sample PyCharm test configuration as the section
+above. You can then open up the 'index.html' file to see the results of the coverage. 
 
 
 

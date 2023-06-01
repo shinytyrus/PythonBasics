@@ -1,7 +1,12 @@
 from basics import basics_integers_and_floats
+
+
 # content of test_sample.py
 def func(x):
-    return x + 1
+    if x == 3:
+        return x
+    else:
+        return x + 1
 
 
 def test_answer():
