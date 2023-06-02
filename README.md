@@ -84,7 +84,6 @@ steps required - https://realpython.com/python-virtual-environments-a-primer/#ho
 Once you've done that, you're ready to go and get hands on into code! 
 
 # Playing around with Python, the simple steps!
-
 ## Folder Structure
 An important part of getting started with Python is setting up a folder structure. You may not need to do this right
 away, especially if your project is only a few small files. However, if your project starts to span out to multiple
@@ -106,7 +105,6 @@ stores the functional code that is written and is related to Module_A. You may h
 related files. Finally, there's a 'tests' folder which holds all the test code for each module. Within this folder, you
 can add sub-folders for each module to test, or you can use a specific naming convention like 
 'test_module_a_<test_name>'.
-
 
 
 # Testing 
@@ -198,9 +196,34 @@ the project. Once in there, you can run the following command to run the test an
 `python3 -m pytest --cov-branch --cov=Module_A --cov-report=html`.
 
 This will output the same information as if you'd run it using the sample PyCharm test configuration as the section
-above. You can then open up the 'index.html' file to see the results of the coverage. 
+above. You can then open up the 'index.html' file to see the results of the coverage.
 
+# Python Packages
+There are a whole range of python packages like the ones we've already discussed above. Each package is stored on
+Python's Package Index called PyPI. You can install, uninstall, upgrade any packages you want but this doesn't mean that
+you should install all the packages. It's good practice to only install the packages you need as many packages have
+other packages they are dependant on which can get quite confusing. Especially when you want to install two different
+packages but they require the same dependant package but different versions of it.
 
+When you're starting off there's only a small selection of Python Packages I'd suggest you install and these are:
 
+* virtualenv - To create your virtual environments
+* pytest - For testing your code (do this within a virtual environment)
+* pytest-cov - For checking code coverage (do this within a virtual environment)
+* black - To format your code (do this within a virtual environment)
 
+For a basic Python project where you're writing simple functions and don't need to access parts of the internet or
+do some fancy stuff, these packages will be all you really need. However, when you start to build your project up more,
+you may want to use configuration files, dealing with HTTP response codes or checking against security vulnerabilities 
+in your code, there will be other packages you may want to look into. These packages are as follows:
 
+* json - Used for parsing JSON content
+* pyyaml - Used for parsing YAML content
+* jinja2 - Used for templating parts of your code
+* requests - Used for making HTTP requests
+* boto3 - The AWS SDK
+* datetime - Useful for when you are dealing with dates/times or timezone values
+* argparse - Useful for parsing input arguments from a python executable
+* sqlalchemy - Useful when communicating with a Database via SQL
+* pipdeptree - See all the install packages and their dependencies
+* pip-autoremove - Remove a package and all it's dependencies (may not work)
